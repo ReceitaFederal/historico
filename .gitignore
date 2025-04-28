@@ -1,0 +1,34 @@
+# Ignorar checkpoints de notebooks
+.ipynb_checkpoints/
+
+# Ignorar configurações locais do Jupyter
+.jupyter/
+
+# Ignorar ambientes virtuais
+env/
+venv/
+.venv/
+
+# Ignorar arquivos Python compilados
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignorar arquivos de configuração do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Ignorar pastas do Node.js (se usar extensões no JupyterLab)
+node_modules/
+
+# Ignorar arquivos de logs
+*.log
+
+# Ignorar backups de editores
+*~
+*.bak
+
+# Ignorar caches
+.cache/
+.mypy_cache/
+.pytest_cache/

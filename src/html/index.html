@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Vis.js + Hyparquet - Timeline com Nested Groups</title>    
+
+    <script type="module">    
+
+    import { Historico } from "./historico.js";
+    import { HistoricoVis } from "./historico_vis.js";
+
+    window.addEventListener("load", async ()=>{
+        
+
+        const url = "../../dados/";
+
+        // Histórico sabe buscar progressivamente os dados de histórico do nível macro para o micro
+        const historico = new Historico(
+            url, 
+            ["uf", "municipio"], 
+            "data_inicio", 
+            "data_fim", 
+            "quantidade_pessoas"
+        );
+
+        const container = document.getElementById('visualization');
+
+        const historicoVis = new HistoricoVis(container, historico);        
+    });
+    </script>
+</head>
+<body>
+    <h1>Timeline de Eventos com Nested Groups</h1>
+    <div id="visualization" style="height: 600px;"></div>
+</body>
+</html>
